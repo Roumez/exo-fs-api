@@ -1,0 +1,27 @@
+1) Ne pas utiliser l’api fs
+ afficher ce qui a été passer sur le process argv [2]
+
+ 2) cat utilise l’api fs, affiche le contenu du fichier 
+
+ 3)cp  gestion des erreurs est ce un répertoire avec isFile 
+
+ 4) afficher des fichier à la suite readFileSync des differents fichier
+
+ 5)append copie le contenu src.txt dans dst.txt
+
+ 6)tail.js lire le fichier, split le fichier, espace ou /n verifier file.txt est un fichier
+
+ 7)wc afficher le nombre caractere, mot et ligne1) Ne pas utiliser l’api fs
+ afficher ce qui a été passer sur le process argv [2]
+
+ 2) cat utilise l’api fs, affiche le contenu du fichier 
+
+ 3)cp  gestion des erreurs est ce un répertoire avec isFile 
+
+ 4) afficher des fichier à la suite readFileSync des differents fichier
+
+ 5)append copie le contenu src.txt dans dst.txt
+
+ 6)tail.js lire le fichier, split le fichier, espace ou /n verifier file.txt est un fichier
+
+ 7)wc afficher le nombre caractere, mot et ligne

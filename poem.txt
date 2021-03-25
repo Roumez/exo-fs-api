@@ -12,3 +12,11 @@
  6)tail.js lire le fichier, split le fichier, espace ou /n verifier file.txt est un fichier
 
  7)wc afficher le nombre caractere, mot et ligne
+
+ iuieieu
+ uieieui
+ uieiueiu
+ uieiueiu
+ uieeiuie
+ iuueui
+ 

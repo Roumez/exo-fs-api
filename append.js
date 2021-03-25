@@ -18,7 +18,7 @@ for (let i = 2; i < process.argv.length; i++) {
 }
 console.log(tab)
 
-// mettre les elem dans lastDoc
+// mettre l’elem du tab dans lastDoc
 for (const elem of tab) {
   fs.appendFileSync(lastDoc, elem)
 }

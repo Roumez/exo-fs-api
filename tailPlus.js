@@ -1,4 +1,5 @@
 const fs = require('fs')
+let nbLines = 10
 
 //index pour prendre le dossier
 if (process.argv.length === 3) {
@@ -11,11 +12,8 @@ if (process.argv.length === 3) {
   const read = fs.readFileSync(process.argv[2], 'utf-8');
 
   //Fonction pour recuperer les 10 dernieres lignes du tableau
-  let tab = (read.split('\n').slice(-10, -1))
-
-  for (let elem of tab) {
-    console.log(elem)
-  }
+  let lastLines = (read.split('\n').slice(-nbLines).join('\n'))
+  console.log(lastLines)
 }
 //Sinon si Longueur arguments avec option -n
 else if (process.argv.length === 5) {

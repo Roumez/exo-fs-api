@@ -1,24 +1,28 @@
 const fs = require('fs')
-let lastDoc = process.argv[process.argv.length - 1]
-let tab = []
 
-// Longueur de nos arguments
-if (process.argv.length < 4) {
-  console.log(`Error: length is not defined`)
+
+if (process.argv.length < 3) {
+  console.log(`Le nombre d’arguments`)
   process.exit(1)
 }
-// check if the path exist
-for (let i = 2; i < process.argv.length; i++) {
-  if (!fs.existsSync(process.argv[i])) {
-    console.log(`Désolé, ${process.argv[i]} n\'existe pas`)
+process.argv.slice(2, -1).forEach((el) => {
+  if (!fs.existsSync(el)) {
+    console.log(`warning: ${el} n’existe pas`);
     process.exit(1)
   }
-  //envoi des documents lu dans tab
-  tab.push(fs.readFileSync(process.argv[i], 'utf-8'))
-}
-console.log(tab)
+})
+process.argv.slice(2).forEach((el) => {
+  const stats = fs.statSync(el);
+  if (!stats.isFile()) {
+    console.log(`warning: ${el} pas un fichier.`)
+    process.exit(1)
+  }
+})
 
-// mettre l’elem du tab dans lastDoc
-for (const elem of tab) {
-  fs.appendFileSync(lastDoc, elem)
+let text = ``
+//lire les arguments en ligne de commande
+for (let i = 2; i < process.argv.length - 1; ++i) {
+  text += fs.readFileSync(process.argv[i])
 }
+let lastDoc = process.argv[process.argv.length - 1]
+fs.writeFileSync(lastDoc, text)
